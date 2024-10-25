@@ -77,15 +77,12 @@ const Home: React.FC = () => {
   }, [selectedDate, allTasks])
 
   const filterTasks = () => {
-    // 4. Log `allTasks` before filtering
     console.log("All Tasks: ", allTasks)
 
     const filteredTasks = allTasks.filter(
       task =>
         new Date(task.taskDate).toDateString() === selectedDate.toDateString()
     )
-
-    // 5. Log filtered tasks for the selected date
     console.log("Filtered Tasks: ", filteredTasks)
 
     setTasks(filteredTasks)

@@ -21,7 +21,6 @@ const SuperAdminHeader: React.FC = () => {
       <div className="flex justify-between w-full">
         <NavbarBrand className="flex items-center space-x-2">
           <img src={logo2} className="w-32 h-16 rounded-2xl" alt="Dummy Logo" />
-          {/* <span className="text-lg font-semibold text-white">Dashboard</span> */}
         </NavbarBrand>
         <div className="space-x-4">
           <NavbarCollapse>
@@ -38,21 +37,17 @@ const SuperAdminHeader: React.FC = () => {
         </div>
 
         <div className="flex md:order-2 items-center">
-          {/* Notification Icon or Placeholder */}
           <FaUserCircle size={40} className="text-white mr-3" />
 
-          {/* Dropdown for Profile, Settings, and Logout */}
           <Dropdown
             arrowIcon={false}
             inline
             label={
               <div className="flex items-center space-x-2">
                 <span className="font-bold hidden md:block">John Doe</span>{" "}
-                {/* Static Name */}
               </div>
             }
           >
-            {/* Dropdown Items for Small Screens */}
             <div className="md:hidden">
               {["Employees", "Managers", "Requests"].map(
                 (dropdownItem, index) => (
@@ -63,7 +58,6 @@ const SuperAdminHeader: React.FC = () => {
 
             <DropdownDivider />
 
-            {/* Profile Dropdown Items */}
             {["Profile", "Messages", "Notifications"].map(
               (dropdownItem, index) => (
                 <DropdownItem key={index}>{dropdownItem}</DropdownItem>
@@ -71,13 +65,9 @@ const SuperAdminHeader: React.FC = () => {
             )}
 
             <DropdownDivider />
-
-            {/* Logout */}
             <DropdownItem onClick={handleLogOut}>Sign out</DropdownItem>
           </Dropdown>
         </div>
-
-        {/* Navbar Links (Hidden on small screens, visible on larger) */}
       </div>
     </Navbar>
   )

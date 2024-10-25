@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
-import * as Yup from "yup" // For form validation
+import * as Yup from "yup" 
 import React from "react"
 import axios from "axios"
 import { SERVER_URL } from "../../constants"
@@ -9,7 +9,6 @@ import { useDispatch } from "react-redux"
 import { setUser } from "../../redux/userSlice"
 import showToast from "../../utils/toast"
 
-// Define interface for form fields
 interface LoginFormValues {
   email: string
   password: string
@@ -132,7 +131,7 @@ const Login: React.FC = () => {
                   placeholder={field.placeholder}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  value={formik.values[field.name]} // Access formik values based on field name
+                  value={formik.values[field.name]}
                 />
                 {formik.touched[field.name] && formik.errors[field.name] ? (
                   <div className="text-red-500 text-sm mt-1">
