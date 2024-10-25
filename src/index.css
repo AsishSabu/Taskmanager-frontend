@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply  text-gray-800;
+  font-family: "Proxima Nova", system-ui, sans-serif;
+}
+
+
